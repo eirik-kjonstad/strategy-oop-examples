@@ -16,16 +16,17 @@ contains
 
       logical :: converged 
 
-      integer :: iteration
+      integer :: iteration, max_iteration
 
       real(8) :: x
 
-      converged = .false.
-      iteration = 0
+      converged     = .false.
+      iteration     = 0
+      max_iteration = 5
 
       x = 0.0d0 ! initial guess
 
-      do while (.not. converged .and. iteration .lt. 5)
+      do while (.not. converged .and. iteration .lt. max_iteration)
 
          iteration = iteration + 1
 

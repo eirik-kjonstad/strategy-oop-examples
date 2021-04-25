@@ -1,6 +1,6 @@
 program test
 
-   use solver
+   use solver,                            only: solve_equation
    use updater_class,                     only: updater 
    use Newton_Raphson_updater_class,      only: Newton_Raphson_updater
    use steepest_descent_updater_class,    only: steepest_descent_updater
@@ -13,7 +13,7 @@ program test
 
    update_method = Newton_Raphson_updater()
 
-   print*, "Calling the solver with Newton-Raphson updater!"
+   print*, "Calling the solver with Newton-Raphson updater"
 
    call solve_equation(update_method)
 
@@ -21,7 +21,7 @@ program test
 
    update_method = steepest_descent_updater()
 
-   print*, "Calling the solver with steepest descent updater!"
+   print*, "Calling the solver with steepest descent updater"
 
    call solve_equation(update_method)
 
