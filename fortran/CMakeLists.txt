@@ -7,6 +7,7 @@ project(test Fortran)
 # Include source files
 set(test_sources
     src/test_program.F90
+    src/solver.F90
     src/updaters/updater.F90
     src/updaters/steepest_descent_updater.F90
     src/updaters/Newton_Raphson_updater.F90

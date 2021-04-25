@@ -1,5 +1,6 @@
 program test
 
+   use solver
    use updater_class,                     only: updater 
    use Newton_Raphson_updater_class,      only: Newton_Raphson_updater
    use steepest_descent_updater_class,    only: steepest_descent_updater
@@ -8,16 +9,20 @@ program test
 
    class(updater), allocatable :: update_method
 
-   ! First allocate update_method as a Newton-Raphson updater
+   ! Try out Newton-Raphson
 
    update_method = Newton_Raphson_updater()
 
-   print*, "My Newton-Raphson updater gives me the update:   ", update_method%get_update()
+   print*, "Calling the solver with Newton-Raphson updater!"
 
-   ! Then allocate update_method as a steepest descent updater
+   call solve_equation(update_method)
+
+   ! Reallocate and try out steepest descent
 
    update_method = steepest_descent_updater()
 
-   print*, "My steepest descent updater gives me the update: ", update_method%get_update()
+   print*, "Calling the solver with steepest descent updater!"
+
+   call solve_equation(update_method)
 
 end program test
