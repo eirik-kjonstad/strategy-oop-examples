@@ -1,11 +1,11 @@
 def solveEquation(updateMethod):
-    
-    converged     = False
-    iteration     = 0
-    x             = 0.0e0
+
+    converged = False
+    iteration = 0
+    x = 0.0e0
     max_iteration = 5
 
-    while not(converged) and iteration < max_iteration:
+    while not (converged) and iteration < max_iteration:
 
         iteration = iteration + 1
 

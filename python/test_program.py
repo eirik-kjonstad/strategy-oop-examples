@@ -1,4 +1,4 @@
-from updaters import NewtonRaphsonUpdater, steepestDescentUpdater 
+from updaters import NewtonRaphsonUpdater, steepestDescentUpdater
 from solver import solveEquation
 
 print("Calling the solver with Newton-Raphson updater")
