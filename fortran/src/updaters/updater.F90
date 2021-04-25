@@ -18,7 +18,7 @@ module updater_class
 
    abstract interface 
 
-      function get_update(this) result(update) 
+      function get_update(this, x) result(update) 
 
          import :: updater 
 
@@ -26,6 +26,7 @@ module updater_class
 
          class(updater) :: this 
 
+         real(8) :: x 
          real(8) :: update 
 
       end function get_update

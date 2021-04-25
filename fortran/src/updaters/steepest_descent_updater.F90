@@ -18,7 +18,7 @@ module steepest_descent_updater_class
 
 contains
 
-   function get_update(this) result(update)
+   function get_update(this, x) result(update)
 
       ! Get update dummy routine
 
@@ -26,9 +26,10 @@ contains
 
       class(steepest_descent_updater) :: this
 
+      real(8) :: x 
       real(8) :: update 
 
-      update = 1.0d0
+      update = x + 1.0d0
 
    end function get_update 
 

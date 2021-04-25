@@ -18,7 +18,7 @@ contains
 
       integer :: iteration, max_iteration
 
-      real(8) :: x
+      real(8) :: x, dx
 
       converged     = .false.
       iteration     = 0
@@ -30,7 +30,8 @@ contains
 
          iteration = iteration + 1
 
-         x = x + update_method%get_update()
+         dx = update_method%get_update(x)
+         x = x + dx
 
          print*, "Iteration:  ",         iteration
          print*, "Current guess for x:", x

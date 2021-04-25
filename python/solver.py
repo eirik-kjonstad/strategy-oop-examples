@@ -9,7 +9,8 @@ def solveEquation(updateMethod):
 
         iteration = iteration + 1
 
-        x = x + updateMethod.getUpdate()
+        dx = updateMethod.getUpdate(x)
+        x = x + dx
 
         print("Iteration:           ", iteration)
         print("Current guess for x: ", x)
